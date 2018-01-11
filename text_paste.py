@@ -89,7 +89,7 @@ def create_paste(text, **kwargs):
     paste_url = '{}create'.format(MAIN_API_URL)
     kwargs['text'] = text
     response = requests.post(paste_url, data=kwargs)
-    return response.text
+    return response.text.replace('\n','')
 
 
 
