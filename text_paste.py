@@ -94,6 +94,4 @@ def create_paste(text, **kwargs):
 
 
 if __name__ == '__main__':
-    # , title='title',  name='myname', private=0, lang='Text'
-    text = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
-    print(text)
+    return(0)
