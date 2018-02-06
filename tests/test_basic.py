@@ -14,7 +14,7 @@ class TestGetRandomPaste:
 
     def test_get_random_paste_keys(self):
         PASTE_KEYS = ['created', 'hits', 'hits_updated', 'lang', 'lang_code',
-                      'name', 'paste', 'pid', 'raw', 'snipurl', 'title']
+                      'name', 'paste', 'pid', 'raw', 'snipurl', 'title', 'url']
         paste_keys = sorted(self.random_paste.keys())
         assert_that(paste_keys, is_(PASTE_KEYS))
 
