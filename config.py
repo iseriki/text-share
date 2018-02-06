@@ -1,1 +1,1 @@
-MAIN_API_URL = 'http://text-share.com/ap/'
+MAIN_API_URL = 'http://text-share.com/api/'
