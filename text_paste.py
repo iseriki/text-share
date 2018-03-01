@@ -89,11 +89,22 @@ def create_paste(text, **kwargs):
     paste_url = '{}create'.format(MAIN_API_URL)
     kwargs['text'] = text
     response = requests.post(paste_url, data=kwargs)
-    return response.text
-
+    return response.text.replace('\n','')
 
 
 if __name__ == '__main__':
-    # , title='title',  name='myname', private=0, lang='Text'
-    text = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
-    print(text)
+    paste_test = 'ABC aaa bbb ccc'
+    paste_title = 'title'
+    paste_name = 'myname'
+    paste_private = 0
+    paste_lang = 'Text'
+    paste_url = create_paste(text=paste_test,
+                             title=paste_title,
+                             name=paste_name,
+                             private=paste_lang,
+                             lang=paste_lang)
+    paste_id = get_paste_id(paste_url)
+    print("paste_id", paste_id)
+
+    paste = get_paste(paste_id)
+    print("paste", paste)
